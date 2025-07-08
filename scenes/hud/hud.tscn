@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfolunksqxfn8"]
+
+[ext_resource type="FontFile" uid="uid://cmnieuch2nnrs" path="res://fonts/PixelOperator8-Bold.ttf" id="1_48c2t"]
+[ext_resource type="Script" uid="uid://bf53ggr02ruv1" path="res://scenes/hud/hud.gd" id="1_cgeww"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cgeww"]
+font = ExtResource("1_48c2t")
+font_size = 64
+outline_size = 32
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_cgeww")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+
+[node name="ModeLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Mode: Rewind"
+label_settings = SubResource("LabelSettings_cgeww")
